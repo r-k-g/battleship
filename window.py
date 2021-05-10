@@ -87,7 +87,7 @@ class BattleWin(Fl_Double_Window):
 
         if isinstance(self.connection, network.Server):
             self.host_but.label('CONNECTED')
-            self.status_box.label('Connected. Place your boats in the left grid.')
+            self.status_box.label('Connected. Place your boats in the left grid (right click to rotate).')
 
             self.connection.send_data(getuser())
 
@@ -128,7 +128,7 @@ class BattleWin(Fl_Double_Window):
         self.conn_but.deactivate()
         self.menubar.find_item('Game/Join Game').deactivate()
 
-        self.status_box.label('Connected. Place your boats in the left grid.')
+        self.status_box.label('Connected. Place your boats in the left grid (right click to rotate).')
 
         # Send username and start placing boats
         self.connection.send_data(getuser())
